@@ -19,7 +19,7 @@ public class FighterController : MonoBehaviour
     {
         // rigi
         rigi = GetComponent<Rigidbody>();
-        ctrl = new PlayerInputs();
+        ctrl = new IA_PlayerInputs();
         
         // input control map
         ctrl.Enable();        
@@ -33,8 +33,18 @@ public class FighterController : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        //moveInput = ctrl.Player
+        // get player input
+        // change player x
+        // jump if up pressed
+        // 
+        // check if special buttons are pressed
+        // attack if so
+
+        // x movement
+        moveInput = ctrl.Fighting.Move.ReadValue<Vector2>();
+
+        rigi.linearVelocity.x = moveInput.x; 
     }
 }
