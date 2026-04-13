@@ -436,6 +436,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FighterController
   playerNumber: 1
+  speed: 500
+  jump: 0
 --- !u!1 &1215279996
 GameObject:
   m_ObjectHideFlags: 0
