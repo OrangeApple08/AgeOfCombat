@@ -14,7 +14,7 @@ public class FighterController : MonoBehaviour
     // inputs
     private Vector2 moveInput;
 
-    public float speed;
+    public float moveSpeed = 5f;
     public float jump;
     private float Move;
 
@@ -23,16 +23,16 @@ public class FighterController : MonoBehaviour
     {
         // rigi
         rigi = GetComponent<Rigidbody>();
-        // ctrl = new IA_PlayerInputs();
+        ctrl = new IA_PlayerInputs();
         
-        // input control map
-        // ctrl.Enable();        
+        input control map
+        ctrl.Enable();        
     }
 
 
     void OnDisabled()
     {
-        // ctrl.Disable();
+        ctrl.Disable();
     }
 
 
@@ -47,7 +47,12 @@ public class FighterController : MonoBehaviour
         // attack if so
 
         // x movement
-        Move = Input.GetAxis("Horizontal");
-        rigi.linearVelocity = new Vector2(speed * Move * Time.deltaTime, rigi.linearVelocity.y); 
+        rigi.velocity = new Vector2(horizontalMovement * moveSpeed, rigi.velocity.y)
+        
+    }
+
+    public void Move(InputAction.CallbackContext context)
+    {
+        horizontalMovement = context.ReadValue<Vector2>().x;
     }
 }
