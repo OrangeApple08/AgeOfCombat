@@ -432,10 +432,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 976574695}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a03e46e0449a5d34a92782e971ddcd1f, type: 3}
+  m_Script: {fileID: 11500000, guid: 4681400893515d24282d876c50465569, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FighterController
-  playerNumber: 1
+  m_EditorClassIdentifier: Assembly-CSharp::Movement
+  moveSpeed: 5
+  jumpForce: 7
+  playerGrounded: 0
+  maxRayDistance: 0.1
 --- !u!1 &1215279996
 GameObject:
   m_ObjectHideFlags: 0
