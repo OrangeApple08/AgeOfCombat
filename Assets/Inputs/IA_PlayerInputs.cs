@@ -124,7 +124,7 @@ public partial class @IA_PlayerInputs: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""WASD"",
                     ""id"": ""ae56389c-87ee-4092-bb86-f4f2d884f1d8"",
-                    ""path"": ""2DVector"",
+                    ""path"": ""2DVector(mode=1)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
