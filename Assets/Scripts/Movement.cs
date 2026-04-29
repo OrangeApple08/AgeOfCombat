@@ -10,8 +10,6 @@ public class Movement : MonoBehaviour
 {
     // player variables
     public float moveSpeed;
-    public float jumpForce;
-    public bool playerGrounded = false;
     private Rigidbody2D rigi;
     private SpriteRenderer rigiSprite;
     private BoxCollider2D collide;
@@ -20,10 +18,18 @@ public class Movement : MonoBehaviour
     // inputs
     private IA_PlayerInputs ctrl;
 
-    // raycast stuff that I may or may not understand
+    // raycast stuff to change to box
     public float maxRayDistance;
     private float yBounds;
     private float ySpacing = 0.1f;
+
+    // jump
+    public float jumpForce;
+    public float jumpTime;
+    public bool grounded = false;
+    private float groundCount;
+    private float countSpeed = 50f;
+
 
 
     void Awake()
@@ -70,25 +76,46 @@ public class Movement : MonoBehaviour
         rigi.linearVelocity = new Vector2(moveInput.x * moveSpeed, rigi.linearVelocity.y);
 
         // jump
-        if (jumpInput == 1 && playerGrounded)
-        {
-            rigi.linearVelocityY = jumpForce;
-            playerGrounded = false;
-        }
+        // if (jumpInput == 1 && grounded)
+        // {
+        //     rigi.linearVelocityY = jumpForce;
+        //     grounded = false;
+        // }
 
         // see if grounded
         RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - yBounds - ySpacing), Vector2.down, maxRayDistance);
         if (hit.collider != null)
         {
-            print(hit.collider);
-            playerGrounded = true;
+            grounded = true;
         }
         else
         {
-            playerGrounded = false;
+            grounded = false;
         }
 
-        // show ray for cool purposes
+        if (grounded)
+        {
+            groundCount = 0f;
+        }
+        else
+        {
+            groundCount += countSpeed * Time.deltaTime;
+        }
+
+        if (jumpInput == 1)
+        {
+            // check groundcount
+            if (groundCount <= jumpTime)
+            {
+                //rigi.AddForce(Vector2.up * jumpForce, ForceMode.Impulse);
+                rigi.linearVelocity = new Vector2(rigi.linearVelocity.x, jumpForce);
+                //rigi.linearVelocityY += jumpForce;
+            }
+        }
+
+
+
+        // show ray for purposes
         Debug.DrawRay(new Vector2(transform.position.x, transform.position.y - yBounds - ySpacing), Vector2.down * (maxRayDistance), Color.cyan);
     }
 }
