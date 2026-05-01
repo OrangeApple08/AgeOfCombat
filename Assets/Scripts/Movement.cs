@@ -14,6 +14,8 @@ public class Movement : MonoBehaviour
     private SpriteRenderer rigiSprite;
     private BoxCollider2D collide;
     private bool flipSide = true;
+    public int playerNumber;
+    Vector2 moveInput;
 
     // inputs
     private IA_PlayerInputs ctrl;
@@ -57,7 +59,12 @@ public class Movement : MonoBehaviour
     void FixedUpdate()
     {
         // get inputs
-        Vector2 moveInput = ctrl.Fighting.Move.ReadValue<Vector2>();
+        if (playerNumber == 1) {
+            moveInput = ctrl.Fighting.Move1.ReadValue<Vector2>();
+        } 
+        else {
+            moveInput = ctrl.Fighting.Move2.ReadValue<Vector2>();
+        }
         float jumpInput = moveInput.y;
         
         // set the direction the player is facing, there's probably way better ways to do this...
