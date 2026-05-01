@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movement
   moveSpeed: 5
+  playerNumber: 2
   maxRayDistance: 0.1
   jumpForce: 4
   jumpTime: 15
@@ -620,6 +621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movement
   moveSpeed: 5
+  playerNumber: 1
   maxRayDistance: 0.1
   jumpForce: 4
   jumpTime: 15
