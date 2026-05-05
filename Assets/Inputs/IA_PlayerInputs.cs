@@ -320,7 +320,7 @@ public partial class @IA_PlayerInputs: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""ArrowKeys"",
                     ""id"": ""4364290b-d391-4f37-a2c0-437b9fd149e4"",
-                    ""path"": ""2DVector"",
+                    ""path"": ""2DVector(mode=1)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

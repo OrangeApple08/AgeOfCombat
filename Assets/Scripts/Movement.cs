@@ -81,6 +81,7 @@ public class Movement : MonoBehaviour
 
         // player movement
         rigi.linearVelocity = new Vector2(moveInput.x * moveSpeed, rigi.linearVelocity.y);
+        
 
         // jump
         // if (jumpInput == 1 && grounded)
