@@ -32,6 +32,10 @@ public class Movement : MonoBehaviour
     private float groundCount;
     private float countSpeed = 50f;
 
+    // alive
+    public GameObject restartBtn;
+    public bool isAlive1 = true;
+    public bool isAlive2 = true;
 
 
     void Awake()
@@ -45,6 +49,11 @@ public class Movement : MonoBehaviour
         // connect input map to this ctrl variable
         ctrl = new IA_PlayerInputs();
         ctrl.Enable();
+
+        // alive thinsg
+        isAlive1 = true;
+        isAlive2 = true;
+        restartBtn.SetActive(false);
     }
 
 
@@ -60,10 +69,14 @@ public class Movement : MonoBehaviour
     {
         // get inputs
         if (playerNumber == 1) {
-            moveInput = ctrl.Fighting.Move1.ReadValue<Vector2>();
+            if (isAlive1) {
+                moveInput = ctrl.Fighting.Move1.ReadValue<Vector2>();
+            }
         } 
         else {
-            moveInput = ctrl.Fighting.Move2.ReadValue<Vector2>();
+            if (isAlive2) {
+                moveInput = ctrl.Fighting.Move2.ReadValue<Vector2>();
+            }
         }
         float jumpInput = moveInput.y;
         
@@ -122,8 +135,16 @@ public class Movement : MonoBehaviour
         }
 
 
-
         // show ray for purposes
         Debug.DrawRay(new Vector2(transform.position.x, transform.position.y - yBounds - ySpacing), Vector2.down * (maxRayDistance), Color.cyan);
+    }
+
+    void OnCollisionEnter(Collision other) {
+        if (other.transform.tag == "KillPlane")
+        {
+            isAlive1 = false;
+            isAlive2 = false;
+            restartBtn.SetActive(true);
+        }
     }
 }
