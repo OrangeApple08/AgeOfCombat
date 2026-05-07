@@ -138,12 +138,11 @@ public class Movement : MonoBehaviour
             }
         }
 
-
         // show ray for purposes
         Debug.DrawRay(new Vector2(transform.position.x, transform.position.y - yBounds - ySpacing), Vector2.down * (maxRayDistance), Color.cyan);
     }
 
-    void OnCollisionEnter(Collision other) 
+    void OnTriggerEnter(Collider other) 
     {
         if (other.transform.tag == "KillPlane")
         {
@@ -151,5 +150,6 @@ public class Movement : MonoBehaviour
             isAlive2 = false;
             restartBtn.SetActive(true);
         }
+        print(other.transform.tag);
     }
 }
