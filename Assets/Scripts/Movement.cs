@@ -33,9 +33,9 @@ public class Movement : MonoBehaviour
     private float countSpeed = 50f;
 
     // alive
-    public GameObject restartBtn;
     public bool isAlive1 = true;
     public bool isAlive2 = true;
+    public GameObject restartBtn;
 
 
     void Awake()
