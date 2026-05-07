@@ -157,7 +157,7 @@ MonoBehaviour:
   jumpForce: 4
   jumpTime: 15
   grounded: 0
-  restartBtn: {fileID: 0}
+  restartBtn: {fileID: 384289902}
   isAlive1: 1
   isAlive2: 1
 --- !u!50 &18193442
@@ -1069,7 +1069,7 @@ MonoBehaviour:
   jumpForce: 4
   jumpTime: 15
   grounded: 0
-  restartBtn: {fileID: 0}
+  restartBtn: {fileID: 384289902}
   isAlive1: 1
   isAlive2: 1
 --- !u!1001 &1078793843
