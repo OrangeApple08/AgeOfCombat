@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 90654137}
   m_Layer: 0
   m_Name: Static Sprite
-  m_TagString: Respawn
+  m_TagString: KillPlane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1375,7 +1375,7 @@ GameObject:
   - component: {fileID: 1559489344}
   m_Layer: 0
   m_Name: KillPlane
-  m_TagString: Respawn
+  m_TagString: KillPlane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -150,6 +150,6 @@ public class Movement : MonoBehaviour
             isAlive2 = false;
             restartBtn.SetActive(true);
         }
-        print(other.transform.tag);
+        Debug.Log(other.transform.tag);
     }
 }
