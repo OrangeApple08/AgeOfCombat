@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 18193441}
   m_Layer: 0
   m_Name: Player2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,8 +158,8 @@ MonoBehaviour:
   jumpTime: 15
   grounded: 0
   restartBtn: {fileID: 384289902}
-  isAlive1: 1
-  isAlive2: 1
+  isAlive1: 0
+  isAlive2: 0
 --- !u!50 &18193442
 Rigidbody2D:
   serializedVersion: 5
@@ -337,7 +337,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.65, z: 0}
-  m_LocalScale: {x: 1, y: 0.45, z: 1}
+  m_LocalScale: {x: 1, y: 0.45, z: 14.367}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1559489343}
@@ -898,7 +898,7 @@ GameObject:
   - component: {fileID: 976574700}
   m_Layer: 0
   m_Name: Player1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1070,8 +1070,8 @@ MonoBehaviour:
   jumpTime: 15
   grounded: 0
   restartBtn: {fileID: 384289902}
-  isAlive1: 1
-  isAlive2: 1
+  isAlive1: 0
+  isAlive2: 0
 --- !u!1001 &1078793843
 PrefabInstance:
   m_ObjectHideFlags: 0

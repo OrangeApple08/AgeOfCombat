@@ -68,13 +68,17 @@ public class Movement : MonoBehaviour
     void FixedUpdate()
     {
         // get inputs
-        if (playerNumber == 1) {
-            if (isAlive1) {
+        if (playerNumber == 1) 
+        {
+            if (isAlive1) 
+            {
                 moveInput = ctrl.Fighting.Move1.ReadValue<Vector2>();
             }
         } 
-        else {
-            if (isAlive2) {
+        else 
+        {
+            if (isAlive2) 
+            {
                 moveInput = ctrl.Fighting.Move2.ReadValue<Vector2>();
             }
         }
@@ -139,7 +143,8 @@ public class Movement : MonoBehaviour
         Debug.DrawRay(new Vector2(transform.position.x, transform.position.y - yBounds - ySpacing), Vector2.down * (maxRayDistance), Color.cyan);
     }
 
-    void OnCollisionEnter(Collision other) {
+    void OnCollisionEnter(Collision other) 
+    {
         if (other.transform.tag == "KillPlane")
         {
             isAlive1 = false;
