@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 90654137}
   m_Layer: 0
   m_Name: Static Sprite
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -335,12 +335,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 90654135}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.65, z: 0}
-  m_LocalScale: {x: 1, y: 0.45, z: 14.367}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.18, y: -12.324375, z: 0}
+  m_LocalScale: {x: 211.60072, y: 1.636875, z: 14.367}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1559489343}
+  m_Father: {fileID: 1744119420}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &90654137
 Rigidbody2D:
@@ -1375,7 +1375,7 @@ GameObject:
   - component: {fileID: 1559489344}
   m_Layer: 0
   m_Name: KillPlane
-  m_TagString: KillPlane
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1449,8 +1449,7 @@ Transform:
   m_LocalPosition: {x: 1.18, y: -9.96, z: 0}
   m_LocalScale: {x: 211.60072, y: 3.6375, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 90654136}
+  m_Children: []
   m_Father: {fileID: 1744119420}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1559489344
@@ -1711,6 +1710,7 @@ Transform:
   m_Children:
   - {fileID: 1215280000}
   - {fileID: 1977874560}
+  - {fileID: 90654136}
   - {fileID: 1559489343}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
