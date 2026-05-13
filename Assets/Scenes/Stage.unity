@@ -157,9 +157,9 @@ MonoBehaviour:
   jumpForce: 4
   jumpTime: 15
   grounded: 0
-  restartBtn: {fileID: 384289902}
   isAlive1: 0
   isAlive2: 0
+  restartBtn: {fileID: 384289902}
 --- !u!50 &18193442
 Rigidbody2D:
   serializedVersion: 5
@@ -320,6 +320,7 @@ GameObject:
   - component: {fileID: 90654139}
   - component: {fileID: 90654138}
   - component: {fileID: 90654137}
+  - component: {fileID: 90654140}
   m_Layer: 0
   m_Name: Static Sprite
   m_TagString: KillPlane
@@ -474,6 +475,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &90654140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90654135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8f5dedd446e3954aa0e3ca757c47657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KillPlayer
+  player: {fileID: 0}
 --- !u!1 &242966576
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,8 +848,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1472850361}
-        m_TargetAssemblyTypeName: RestartLevel, Assembly-CSharp
-        m_MethodName: Restart
+        m_TargetAssemblyTypeName: ButtonHandler, Assembly-CSharp
+        m_MethodName: RestartLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1069,9 +1083,9 @@ MonoBehaviour:
   jumpForce: 4
   jumpTime: 15
   grounded: 0
-  restartBtn: {fileID: 384289902}
   isAlive1: 0
   isAlive2: 0
+  restartBtn: {fileID: 384289902}
 --- !u!1001 &1078793843
 PrefabInstance:
   m_ObjectHideFlags: 0
